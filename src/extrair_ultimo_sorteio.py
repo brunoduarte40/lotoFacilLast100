@@ -4,14 +4,15 @@ from lxml import html
 import requests
 import requests
 import urllib
-from bs4 import BeautifulSoup
+import bs4
+
 ########################################__Site_da_cotacao#########################
 page = 'https://noticias.uol.com.br/loterias/lotofacil/'
 page = requests.get("https://noticias.uol.com.br/loterias/lotofacil/")
 tree = html.fromstring(page.content)
-soup = BeautifulSoup(page.content, 'html.parser')
+soup = bs4.BeautifulSoup(page.content, 'html.parser')
 soup.get
-soup = BeautifulSoup(page.content, 'html.parser')
+soup = bs4.BeautifulSoup(page.content, 'html.parser')
 soup.get_text()
 all_text = soup.find_all(class_="quote")
 all_text
