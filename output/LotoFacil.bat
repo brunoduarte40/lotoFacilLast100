@@ -1,0 +1,3 @@
+start C:\lotoFacilLast100\output\extrair_ultimo_sorteio\extrair_ultimo_sorteio.exe
+timeout 10 /nobreak
+start C:\lotoFacilLast100\output\seleciona_ult_100_sorteios\seleciona_ult_100_sorteios.exe

@@ -30,7 +30,7 @@ string_concurso = string_separada[1]
 int_concurso_web = int(string_concurso)
 print(int_concurso_web)
 #################################pegando_ultimo_concurso##############################
-dataFrame_baixado = pd.read_csv(r'..\dados\LOTOFACIL.csv', sep=';')
+dataFrame_baixado = pd.read_csv(r'C:\lotoFacilLast100\dados\LOTOFACIL.csv', sep=';')
 ######################################################################################
 ultimo_concurso_registrado = dataFrame_baixado.loc[0, 'concurso']
 int_ultimo_concurso_registrado = int(ultimo_concurso_registrado)
@@ -58,14 +58,14 @@ if int_concurso_web > int_ultimo_concurso_registrado: # End of condition
     data_frame_organizado = data_frame_adicioando_novas_colunas[
         ['concurso', 'data', 'B1', 'B2', 'B3', 'B4', 'B5', 'B6', 'B7', 'B8', 'B9', 'B10', 'B11', 'B12', 'B13', 'B14',
          'B15']]
-    data_frame_organizado.to_csv(r'..\dados\ultimo_jogo.csv', sep=';', index=False)
+    data_frame_organizado.to_csv(r'C:\lotoFacilLast100\dados\ultimo_jogo.csv', sep=';', index=False)
     ###################################################################################
     ###################################################################################
     dataFrame_baixado = pd.read_csv(
-        r'..\dados\LOTOFACIL.csv', sep=';')
+        r'C:\lotoFacilLast100\dados\LOTOFACIL.csv', sep=';')
     ##############################concatenar_ultimo_jogo_com_resto#####################
     planilha_concatenada = pd.concat([data_frame_organizado, dataFrame_baixado])
-    planilha_concatenada.to_csv(r'..\dados\LOTOFACIL.csv', sep=';', index=False)
+    planilha_concatenada.to_csv(r'C:\lotoFacilLast100\dados\LOTOFACIL.csv', sep=';', index=False)
     ###################################################################################
     ###############################pegar_ultimo_concurso###############################
 else:
